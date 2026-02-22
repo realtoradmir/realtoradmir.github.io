@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North St. Johns County · Complete Family & Market Guide · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0f2d4a;--blue:#1a5276;--teal:#17a589;--sky:#e8f4fb;
+  --gold:#e67e22;--amber:#f1c40f;--green:#27ae60;--red:#c0392b;
+  --purple:#7d3c98;--sand:#fdf6ec;--warm:#f5ede0;--mid:#6b7f8e;
+  --dark:#0d1f2d;--white:#fff;--border:#dde8f0;--light:#f4f9fc;
+}
+body{font-family:'DM Sans',sans-serif;background:#f0f6fa;color:var(--dark);overflow-x:hidden;}
+.hero{background:var(--navy);padding:52px 48px 48px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 40%,rgba(23,165,137,.13) 0%,transparent 60%),
+             radial-gradient(ellipse at 15% 85%,rgba(231,126,34,.09) 0%,transparent 50%);}
+.hero-top{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.hero-badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:100px;
+  padding:5px 14px 5px 10px;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:8px;}
+.hero-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px rgba(23,165,137,.9);}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,5vw,56px);font-weight:800;color:#fff;line-height:1.1;max-width:720px;}
+.hero h1 em{color:var(--amber);font-style:italic;font-weight:400;}
+.hero-sub{margin-top:12px;font-size:13.5px;color:rgba(255,255,255,.5);font-weight:300;max-width:600px;line-height:1.65;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.pill{font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:100px;display:inline-flex;align-items:center;gap:5px;}
+.p-teal{background:rgba(23,165,137,.2);color:#7eecd9;border:1px solid rgba(23,165,137,.3);}
+.p-gold{background:rgba(241,196,15,.2);color:var(--amber);border:1px solid rgba(241,196,15,.3);}
+.p-blue{background:rgba(52,152,219,.2);color:#7ec8f0;border:1px solid rgba(52,152,219,.3);}
+.p-red{background:rgba(231,76,60,.2);color:#f1948a;border:1px solid rgba(231,76,60,.3);}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);text-decoration:none;font-size:12px;letter-spacing:1px;margin-bottom:24px;transition:color .2s;}
+.back-link:hover{color:var(--amber);}
+.wrap{max-width:1120px;margin:0 auto;padding:44px 48px;}
+@media(max-width:660px){.wrap{padding:26px 18px;}.hero{padding:40px 18px;}}
+.sec-eye{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:5px;}
+.sec-title{font-family:'Fraunces',serif;font-size:26px;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:4px;}
+.sec-sub{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:24px;}
+.dist-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);border-radius:16px;
+  padding:30px 32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+  margin-bottom:24px;position:relative;overflow:hidden;}
+.dist-banner::after{content:'🏆';position:absolute;right:180px;top:50%;transform:translateY(-50%);font-size:90px;opacity:.06;}
+.dist-h{font-family:'Fraunces',serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:6px;}
+.dist-p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.65;max-width:520px;}
+.dist-stats{display:flex;gap:22px;flex-wrap:wrap;flex-shrink:0;}
+.ds{text-align:center;}
+.ds-val{font-family:'Fraunces',serif;font-size:32px;font-weight:800;color:var(--amber);line-height:1;}
+.ds-lbl{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:1px;margin-top:3px;}
+.zone-note{background:#fff9e6;border:1px solid #f9e4a0;border-radius:12px;
+  padding:14px 18px;display:flex;gap:11px;align-items:flex-start;
+  margin-bottom:30px;font-size:12.5px;color:#7d5a00;line-height:1.6;}
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px;}
+.ftab{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;
+  border-radius:100px;border:1.5px solid var(--border);cursor:pointer;background:var(--white);
+  color:var(--mid);transition:all .2s;}
+.ftab:hover{border-color:var(--teal);color:var(--teal);}
+.ftab.on{background:var(--navy);color:#fff;border-color:var(--navy);}
+.schools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;margin-bottom:14px;}
+.sc{background:var(--white);border-radius:14px;padding:20px 20px 18px;border:1px solid var(--border);
+  transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;}
+.sc:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.08);}
+.sc-bar{position:absolute;top:0;left:0;right:0;height:4px;}
+.bar-elem{background:linear-gradient(90deg,#3498db,#2ecc71);}
+.bar-mid{background:linear-gradient(90deg,#9b59b6,#3498db);}
+.bar-high{background:linear-gradient(90deg,#e74c3c,#f39c12);}
+.bar-k8{background:linear-gradient(90deg,#27ae60,#1abc9c);}
+.bar-new{background:linear-gradient(90deg,var(--amber),#f39c12);}
+.sc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin:10px 0 10px;}
+.sc-name{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--navy);line-height:1.25;}
+.sc-loc{font-size:11px;color:var(--mid);margin-top:2px;}
+.grade{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:9px;font-family:'Fraunces',serif;font-size:20px;font-weight:800;flex-shrink:0;}
+.ga{background:#eafaf1;color:#196f3d;}.gb{background:#edf3fb;color:#1a5276;}
+.gnew{background:#fef9e7;color:#7d5a00;}.ga2{background:#d5f5e3;color:#0e6655;}
+.sc-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.stag{font-size:10px;font-weight:600;padding:3px 9px;border-radius:6px;}
+.lv-e{background:#e8f4fb;color:#1a5276;}.lv-m{background:#f0ebfa;color:#6c3483;}
+.lv-h{background:#fdecea;color:#922b21;}.lv-k8{background:#e8faf4;color:#1a6b4a;}
+.lv-new{background:#fef9e7;color:#7d5a00;}
+.stag-rank{background:#fff8e7;color:#7d5a00;}
+.stag-prog{background:#eaf4e8;color:#1a6b2a;}
+.stag-note{background:#f4f0fb;color:#5b2c8a;}
+.sc-bars{margin-bottom:10px;}
+.brow{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.blbl{font-size:10.5px;color:var(--mid);width:56px;flex-shrink:0;}
+.btrack{flex:1;height:7px;background:var(--sky);border-radius:100px;overflow:hidden;}
+.bfill{height:100%;border-radius:100px;transition:width 1.2s ease;}
+.bpct{font-size:10.5px;font-weight:600;color:var(--dark);width:34px;text-align:right;}
+.bavg{font-size:9.5px;color:var(--mid);margin-left:2px;}
+.sc-note{font-size:11.5px;color:var(--mid);line-height:1.55;border-top:1px solid var(--border);padding-top:9px;}
+.sc-zip{font-family:'DM Mono',monospace;font-size:9px;color:var(--mid);margin-top:6px;letter-spacing:1px;}
+.sc-soon{border:2px dashed #f0c060;background:#fffdf0;}
+.sc-soon .sc-name{color:#7d5a00;}
+.premium{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);border-radius:16px;
+  padding:30px 32px;margin-bottom:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;}
+@media(max-width:540px){.premium{grid-template-columns:1fr;}}
+.premium h3{font-family:'Fraunces',serif;font-size:21px;font-weight:800;color:#fff;margin-bottom:7px;}
+.premium p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.65;}
+.prem-stat{text-align:center;flex-shrink:0;}
+.prem-val{font-family:'Fraunces',serif;font-size:50px;font-weight:800;color:var(--amber);line-height:1;}
+.prem-lbl{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:4px;max-width:130px;line-height:1.4;}
+.re-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-bottom:26px;}
+.rs{background:var(--white);border-radius:12px;padding:18px 16px;border:1px solid var(--border);
+  border-top:4px solid transparent;transition:transform .18s;}
+.rs:hover{transform:translateY(-2px);}
+.rs.c1{border-top-color:var(--navy);}.rs.c2{border-top-color:var(--gold);}
+.rs.c3{border-top-color:var(--teal);}.rs.c4{border-top-color:var(--purple);}
+.rs.c5{border-top-color:var(--red);}.rs.c6{border-top-color:var(--green);}
+.rs.c7{border-top-color:#e67e22;}.rs.c8{border-top-color:#2980b9;}
+.rs-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--mid);margin-bottom:9px;}
+.rs-val{font-family:'Fraunces',serif;font-size:28px;font-weight:800;color:var(--navy);line-height:1;}
+.rs-val sup{font-size:15px;}
+.chip{display:inline-flex;align-items:center;gap:3px;margin-top:6px;padding:3px 8px;
+  border-radius:100px;font-size:10.5px;font-weight:600;}
+.ch-dn{background:#fdedec;color:#922b21;}.ch-up{background:#eafaf1;color:#1e8449;}
+.ch-fl{background:#f4f8fb;color:var(--mid);border:1px solid var(--border);}
+.rs-note{font-size:10.5px;color:var(--mid);margin-top:4px;line-height:1.4;}
+.table-box{background:var(--white);border-radius:14px;padding:26px;border:1px solid var(--border);
+  margin-bottom:26px;overflow-x:auto;}
+table{width:100%;border-collapse:collapse;min-width:580px;}
+th{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--mid);text-align:left;padding:9px 12px;border-bottom:2px solid var(--sky);}
+td{padding:13px 12px;font-size:13px;border-bottom:1px solid var(--sky);vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:var(--sand);}
+.zc{font-family:'DM Mono',monospace;font-weight:500;color:var(--navy);font-size:14px;}
+.za{font-size:11px;color:var(--mid);margin-top:2px;}
+.ztag{font-size:10px;padding:3px 9px;border-radius:100px;font-weight:600;}
+.zt-buy{background:#eafaf1;color:#196f3d;}.zt-bal{background:#fef9e7;color:#7d5a00;}
+.zt-lux{background:#f4f0fb;color:#5b2c8a;}
+.delta-pos{color:var(--green);font-weight:700;font-size:12px;}
+.delta-neg{color:var(--red);font-weight:700;font-size:12px;}
+.trend-box{background:var(--white);border-radius:14px;padding:26px;border:1px solid var(--border);margin-bottom:26px;overflow-x:auto;}
+.yr{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--navy);}
+.yr.now{color:var(--teal);}
+.mtype{font-size:10px;padding:3px 10px;border-radius:100px;font-weight:600;}
+.mt-s{background:#fdedec;color:#922b21;}.mt-b{background:#fef9e7;color:#7d5a00;}.mt-buy{background:#eafaf1;color:#196f3d;}
+.change-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:26px;}
+.cc{background:var(--white);border-radius:12px;padding:20px 18px;border:1px solid var(--border);text-align:center;}
+.cc-num{font-family:'Fraunces',serif;font-size:38px;font-weight:800;line-height:1;margin-bottom:5px;}
+.cc-lbl{font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px;}
+.cc-desc{font-size:11.5px;color:var(--mid);line-height:1.55;}
+.split{display:grid;grid-template-columns:1fr 1fr;background:var(--white);
+  border-radius:14px;border:1px solid var(--border);overflow:hidden;margin-bottom:26px;}
+@media(max-width:540px){.split{grid-template-columns:1fr;}}
+.sc2{padding:24px;}
+.sc2+.sc2{border-left:1px solid var(--border);}
+@media(max-width:540px){.sc2+.sc2{border-left:none;border-top:1px solid var(--border);}}
+.sh{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+.sh.b{color:var(--green);}.sh.s{color:var(--red);}
+.si{display:flex;gap:9px;font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:11px;}
+.si-i{flex-shrink:0;font-size:13px;margin-top:2px;}
+.forecast-box{background:var(--white);border-radius:14px;padding:26px;border:1px solid var(--border);margin-bottom:26px;}
+.fi{display:flex;gap:11px;align-items:flex-start;margin-bottom:13px;}
+.fd{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+.ft{font-size:13.5px;line-height:1.65;color:var(--dark);}
+.ft strong{color:var(--blue);}
+.footer{text-align:center;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:1.5px;
+  text-transform:uppercase;color:#9aacba;padding:26px 20px 38px;}
+@keyframes up{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.fade{animation:up .5s ease both;}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-top">
+    <a href="index.html" class="back-link">← Back to All Guides</a>
+  </div>
+  <div class="hero-top">
+    <div class="hero-badge"><div class="hero-dot"></div>North St. Johns County · Family &amp; Market Guide · Feb 2026</div>
+  </div>
+  <h1>28 Schools. 5 ZIP Codes.<br><em>One Exceptional District.</em></h1>
+  <p class="hero-sub">Complete coverage of 32092 · 32259 · 32081 · 32082 · 32095 — with school-by-school data, real estate stats, 3-year trends, and everything a family needs to make the right move.</p>
+  <div class="hero-pills">
+    <span class="pill p-teal">🏫 #1 School District Academics in FL</span>
+    <span class="pill p-gold">🏠 Buyer's Market: 3 of 5 ZIP Codes</span>
+    <span class="pill p-blue">📍 North County Only — No Old Town/South SJC</span>
+    <span class="pill p-red">⚠️ Always verify school zones at stjohns.k12.fl.us</span>
+  </div>
+</div>
+<div class="wrap">
+<div class="sec-eye fade">Section 01 · Schools</div>
+<div class="sec-title fade">The District: #1 Academic Proficiency in Florida</div>
+<div class="sec-sub fade">St. Johns County holds the highest math and reading proficiency rates of any school district in Florida — even outperforming higher-ranked Seminole and Sarasota counties in raw test scores.</div>
+<div class="dist-banner fade">
+  <div>
+    <div class="dist-h">St. Johns County School District — 2025–26</div>
+    <p class="dist-p">51,434 students PK–12 · District Niche grade: A · #3 overall in FL (Niche 2026) but #1 in math & reading proficiency statewide · 76% math proficiency vs 52% FL avg · 72% reading vs 52% FL avg · 93% of K-12 students attend public schools · New K-8 school opening in SilverLeaf Fall 2026</p>
+  </div>
+  <div class="dist-stats">
+    <div class="ds"><div class="ds-val">#1</div><div class="ds-lbl">Math & Reading<br>Proficiency FL</div></div>
+    <div class="ds"><div class="ds-val">76%</div><div class="ds-lbl">Math Prof.<br>vs 52% FL avg</div></div>
+    <div class="ds"><div class="ds-val">A</div><div class="ds-lbl">Niche District<br>Grade</div></div>
+  </div>
+</div>
+<div class="zone-note fade">
+  <span style="font-size:18px;flex-shrink:0;">⚠️</span>
+  <span><strong>School Zone Disclaimer:</strong> Boundaries change street by street and are subject to rezoning as the county grows. Never rely solely on a listing's school information. Always verify your specific address at <strong>stjohns.k12.fl.us</strong> before making an offer. The ZIP codes shown on each card indicate the typical service area only.</span>
+</div>
+<div class="filter-bar fade">
+  <button class="ftab on" onclick="filterSchools('all',this)">All 28 Schools</button>
+  <button class="ftab" onclick="filterSchools('elem',this)">Elementary</button>
+  <button class="ftab" onclick="filterSchools('mid',this)">Middle</button>
+  <button class="ftab" onclick="filterSchools('high',this)">High School</button>
+  <button class="ftab" onclick="filterSchools('k8',this)">K-8 / Academy</button>
+  <button class="ftab" onclick="filterSchools('32092',this)">32092</button>
+  <button class="ftab" onclick="filterSchools('32259',this)">32259</button>
+  <button class="ftab" onclick="filterSchools('32081',this)">32081</button>
+  <button class="ftab" onclick="filterSchools('32082',this)">32082</button>
+  <button class="ftab" onclick="filterSchools('32095',this)">32095</button>
+</div>
+<div class="schools-grid" id="schoolGrid">
+  <div class="sc" data-type="high" data-zip="32259"><div class="sc-bar bar-high"></div><div class="sc-top"><div><div class="sc-name">Bartram Trail High School</div><div class="sc-loc">7399 Longleaf Pine Pkwy · St. Johns</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-h">High School</span><span class="stag stag-rank">#104 in FL</span><span class="stag stag-prog">65% AP Rate</span></div><div class="sc-bars"><div class="brow"><div class="blbl">Math</div><div class="btrack"><div class="bfill" style="width:0%;background:#27ae60" data-w="63%"></div></div><div class="bpct">63%</div><span class="bavg">FL 41%</span></div><div class="brow"><div class="blbl">Reading</div><div class="btrack"><div class="bfill" style="width:0%;background:#2980b9" data-w="74%"></div></div><div class="bpct">74%</div><span class="bavg">FL 51%</span></div><div class="brow"><div class="blbl">Grad Rate</div><div class="btrack"><div class="bfill" style="width:0%;background:#8e44ad" data-w="98%"></div></div><div class="bpct">98%</div><span class="bavg">FL 88%</span></div></div><div class="sc-note">Strong AP program, AFJROTC, IT Academy, Business/Finance Academy. 98% graduation rate — highest in the county. Top 20% of all FL schools.</div><div class="sc-zip">ZIP: 32259 · Serves: Julington Creek, Aberdeen, Bartram Park, Durbin Crossing</div></div>
+  <div class="sc" data-type="high" data-zip="32259"><div class="sc-bar bar-high"></div><div class="sc-top"><div><div class="sc-name">Creekside High School</div><div class="sc-loc">100 Knights Lane · St. Johns</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-h">High School</span><span class="stag stag-rank">#43 in FL</span><span class="stag stag-prog">2,554 students</span></div><div class="sc-bars"><div class="brow"><div class="blbl">Math</div><div class="btrack"><div class="bfill" style="width:0%;background:#27ae60" data-w="72%"></div></div><div class="bpct">72%</div><span class="bavg">FL 41%</span></div><div class="brow"><div class="blbl">Reading</div><div class="btrack"><div class="bfill" style="width:0%;background:#2980b9" data-w="78%"></div></div><div class="bpct">78%</div><span class="bavg">FL 51%</span></div><div class="brow"><div class="blbl">Grad Rate</div><div class="btrack"><div class="bfill" style="width:0%;background:#8e44ad" data-w="97%"></div></div><div class="bpct">97%</div><span class="bavg">FL 88%</span></div></div><div class="sc-note">Ranked #43 in Florida. Supportive teachers, wide AP/Honors catalog. Strong student reviews. One of the most respected high schools in NE Florida.</div><div class="sc-zip">ZIP: 32259 · Serves: St. Johns Forest, Durbin Creek, NW St. Johns communities</div></div>
+  <div class="sc" data-type="high" data-zip="32081"><div class="sc-bar bar-high"></div><div class="sc-top"><div><div class="sc-name">Allen D. Nease High School</div><div class="sc-loc">10550 Ray Road · Ponte Vedra</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-h">High School</span><span class="stag stag-rank">#42 in FL</span><span class="stag stag-prog">IB Program</span><span class="stag stag-note">#1 ROTC Nationally</span></div><div class="sc-bars"><div class="brow"><div class="blbl">Math</div><div class="btrack"><div class="bfill" style="width:0%;background:#27ae60" data-w="74%"></div></div><div class="bpct">74%</div><span class="bavg">FL 41%</span></div><div class="brow"><div class="blbl">Reading</div><div class="btrack"><div class="bfill" style="width:0%;background:#2980b9" data-w="80%"></div></div><div class="bpct">80%</div><span class="bavg">FL 51%</span></div><div class="brow"><div class="blbl">Grad Rate</div><div class="btrack"><div class="bfill" style="width:0%;background:#8e44ad" data-w="98%"></div></div><div class="bpct">98%</div><span class="bavg">FL 88%</span></div></div><div class="sc-note">Full IB (International Baccalaureate) program, dual enrollment, #1-ranked ROTC program in the nation. Wide AP catalog. Ranked #42 in FL. Primary high school for Nocatee (32081).</div><div class="sc-zip">ZIP: 32081 · Serves: Nocatee (SJC portion), Ponte Vedra area</div></div>
+  <div class="sc" data-type="high" data-zip="32082"><div class="sc-bar bar-high"></div><div class="sc-top"><div><div class="sc-name">Ponte Vedra High School</div><div class="sc-loc">460 Davis Park Road · Ponte Vedra Beach</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-h">High School</span><span class="stag stag-rank">#35 in FL</span><span class="stag stag-prog">Avg SAT 1290</span></div><div class="sc-bars"><div class="brow"><div class="blbl">Math</div><div class="btrack"><div class="bfill" style="width:0%;background:#27ae60" data-w="84%"></div></div><div class="bpct">84%</div><span class="bavg">FL 41%</span></div><div class="brow"><div class="blbl">Reading</div><div class="btrack"><div class="bfill" style="width:0%;background:#2980b9" data-w="81%"></div></div><div class="bpct">81%</div><span class="bavg">FL 51%</span></div><div class="brow"><div class="blbl">Grad Rate</div><div class="btrack"><div class="bfill" style="width:0%;background:#8e44ad" data-w="97%"></div></div><div class="bpct">97%</div><span class="bavg">FL 88%</span></div></div><div class="sc-note">Highest-ranked high school in North SJC at #35 in FL. Elite math & reading proficiency. Average SAT of 1290. Serves affluent Ponte Vedra Beach corridor. Strong college placement.</div><div class="sc-zip">ZIP: 32082 · Serves: Ponte Vedra Beach, Sawgrass, Palm Valley</div></div>
+  <div class="sc" data-type="high" data-zip="32092"><div class="sc-bar bar-high"></div><div class="sc-top"><div><div class="sc-name">Tocoi Creek High School</div><div class="sc-loc">11200 St Johns Pkwy · St. Augustine</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-h">High School</span><span class="stag stag-rank">#179 in FL</span><span class="stag stag-prog">41% AP Rate</span><span class="stag stag-note">Opened 2021</span></div><div class="sc-bars"><div class="brow"><div class="blbl">Math</div><div class="btrack"><div class="bfill" style="width:0%;background:#27ae60" data-w="65%"></div></div><div class="bpct">65%</div><span class="bavg">FL 41%</span></div><div class="brow"><div class="blbl">Reading</div><div class="btrack"><div class="bfill" style="width:0%;background:#2980b9" data-w="70%"></div></div><div class="bpct">70%</div><span class="bavg">FL 51%</span></div><div class="brow"><div class="blbl">Grad Rate</div><div class="btrack"><div class="bfill" style="width:0%;background:#8e44ad" data-w="96%"></div></div><div class="bpct">96%</div><span class="bavg">FL 88%</span></div></div><div class="sc-note">Newest county high school — class of 2023 was the first to graduate. Growing program with strong activities and clubs. Benefits from the district's A-grade infrastructure.</div><div class="sc-zip">ZIP: 32092 · Serves: WGV, SilverLeaf, TrailMark, Shearwater</div></div>
+  <div class="sc" data-type="high" data-zip="32259"><div class="sc-bar bar-high"></div><div class="sc-top"><div><div class="sc-name">Beachside High School</div><div class="sc-loc">200 Great Barracuda Way · St. Johns</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-h">High School</span><span class="stag stag-prog">AICE Program</span><span class="stag stag-note">1,933 Students</span></div><div class="sc-bars"><div class="brow"><div class="blbl">Math</div><div class="btrack"><div class="bfill" style="width:0%;background:#27ae60" data-w="68%"></div></div><div class="bpct">~68%</div><span class="bavg">FL 41%</span></div><div class="brow"><div class="blbl">Reading</div><div class="btrack"><div class="bfill" style="width:0%;background:#2980b9" data-w="75%"></div></div><div class="bpct">~75%</div><span class="bavg">FL 51%</span></div></div><div class="sc-note">Parents rank it above Ponte Vedra for facilities and department quality. AICE program ranked among best in FL. Athletics rapidly growing. Musical theater program is exceptional.</div><div class="sc-zip">ZIP: 32259 · Serves: Bartram Ranch, St. Johns area south corridor</div></div>
+  <div class="sc" data-type="mid" data-zip="32259"><div class="sc-bar bar-mid"></div><div class="sc-top"><div><div class="sc-name">Switzerland Point Middle</div><div class="sc-loc">NW St. Johns / Nease Road area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-m">Middle School</span><span class="stag stag-rank">Top-5 in County</span><span class="stag stag-prog">1,100+ students</span></div><div class="sc-note">Serves the Julington Creek / Bartram Park corridor. Highly regarded by parents for academic rigor and caring administration. Primary feeder to Bartram Trail HS.</div><div class="sc-zip">ZIP: 32259 · Feeder to: Bartram Trail HS</div></div>
+  <div class="sc" data-type="mid" data-zip="32259"><div class="sc-bar bar-mid"></div><div class="sc-top"><div><div class="sc-name">Fruit Cove Middle School</div><div class="sc-loc">Fruit Cove / St. Johns area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-m">Middle School</span><span class="stag stag-prog">NW St. Johns</span></div><div class="sc-note">Serves the Fruit Cove and surrounding NW St. Johns corridor communities. Well-regarded within the district for teacher quality and student outcomes. Consistent A rating.</div><div class="sc-zip">ZIP: 32259 · Feeder to: Creekside HS / Beachside HS</div></div>
+  <div class="sc" data-type="mid" data-zip="32092"><div class="sc-bar bar-mid"></div><div class="sc-top"><div><div class="sc-name">Pacetti Bay Middle School</div><div class="sc-loc">WGV / SilverLeaf area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-m">Middle School</span><span class="stag stag-rank">Top-10 in County</span><span class="stag stag-prog">~1,500 students</span></div><div class="sc-note">Primary middle school feeder for Tocoi Creek HS. Serves SilverLeaf, TrailMark, WGV communities. Well-reviewed for teacher quality and academic environment.</div><div class="sc-zip">ZIP: 32092 · Feeder to: Tocoi Creek HS</div></div>
+  <div class="sc" data-type="mid" data-zip="32081"><div class="sc-bar bar-mid"></div><div class="sc-top"><div><div class="sc-name">Alice B. Landrum Middle</div><div class="sc-loc">Ponte Vedra / Nocatee area</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-m">Middle School</span><span class="stag stag-rank">#1 Middle in County</span><span class="stag stag-note">Top-10 FL</span></div><div class="sc-note">Ranked the #1 middle school in St. Johns County and among the best in Florida. Strong academic culture, excellent parent reviews. Primary feeder for Nease HS. Serves Nocatee and Ponte Vedra corridor.</div><div class="sc-zip">ZIP: 32081 · Feeder to: Nease HS / Ponte Vedra HS</div></div>
+  <div class="sc" data-type="k8" data-zip="32259"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Hallowes Cove Academy</div><div class="sc-loc">Rivertown · St. Johns</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-prog">Rivertown Community</span></div><div class="sc-note">Serves the Rivertown master-planned community in St. Johns. K-8 format means children stay in one school through middle grades — popular with families who value consistency and community.</div><div class="sc-zip">ZIP: 32259 · Rivertown / St. Johns west corridor</div></div>
+  <div class="sc" data-type="k8" data-zip="32259"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Freedom Crossing Academy</div><div class="sc-loc">St. Johns / NW corridor</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-rank">Highly Rated</span></div><div class="sc-note">K-8 academy serving NW St. Johns area. Consistent district A rating. Well-regarded by families for its K-8 continuity model which builds strong community and reduces transition stress for kids.</div><div class="sc-zip">ZIP: 32259 · NW St. Johns area</div></div>
+  <div class="sc" data-type="k8" data-zip="32092"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Liberty Pines Academy</div><div class="sc-loc">World Golf Village area</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-rank">#5 Elem · #2 Mid County</span><span class="stag stag-prog">1,948 students</span></div><div class="sc-note">Double honor: top 5 for elementary AND top 2 for middle school in the county. 17:1 student-teacher ratio. Parents rave about the academic environment. One of WGV's most prized schools.</div><div class="sc-zip">ZIP: 32092 · Serves: WGV communities, Sevilla, South Hampton</div></div>
+  <div class="sc" data-type="k8" data-zip="32259"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Patriot Oaks Academy</div><div class="sc-loc">St. Johns / NW corridor</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-prog">K-8 Continuity</span></div><div class="sc-note">K-8 academy in the NW St. Johns corridor. Consistent A rating, supportive community culture. The K-8 model is popular with families relocating from other states who want stability for their kids.</div><div class="sc-zip">ZIP: 32259 · NW St. Johns / Durbin area</div></div>
+  <div class="sc" data-type="k8" data-zip="32081"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Valley Ridge Academy</div><div class="sc-loc">Nocatee · Ponte Vedra</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-prog">Nocatee Schools</span></div><div class="sc-note">One of two K-8 schools serving Nocatee (32081). Walk or bike to school from many Nocatee neighborhoods. Strong parent community. Landrum MS or Valley Ridge both serve the Nocatee area depending on exact address.</div><div class="sc-zip">ZIP: 32081 · Serves: Nocatee communities (eastern portions)</div></div>
+  <div class="sc" data-type="k8" data-zip="32082"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Palm Valley Academy</div><div class="sc-loc">Ponte Vedra Beach / Palm Valley</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-rank">Top-rated 32082</span></div><div class="sc-note">Serves the Palm Valley / Ponte Vedra Beach corridor. Top-rated K-8 in the 32082 zip code. Consistent A from the district. Popular with families in Nocatee's Willowcove and nearby areas.</div><div class="sc-zip">ZIP: 32082 · Serves: Palm Valley, Nocatee west, PVB south</div></div>
+  <div class="sc" data-type="k8" data-zip="32095"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Lakeside Academy</div><div class="sc-loc">N. St. Augustine / Palencia area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-prog">32095 Area</span></div><div class="sc-note">K-8 academy serving the north St. Augustine / Palencia corridor in 32095. District A grade. Serves families in the Palencia, Bannon Lakes, and Twin Creeks communities.</div><div class="sc-zip">ZIP: 32095 · Serves: Palencia, Bannon Lakes, N. St. Augustine</div></div>
+  <div class="sc" data-type="k8" data-zip="32259"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Trout Creek Academy</div><div class="sc-loc">St. Johns area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-prog">NW St. Johns</span></div><div class="sc-note">K-8 academy in the St. Johns / NW corridor. District A rating. Serves families in the broader St. Johns area with the K-8 continuity model that has become a hallmark of the county's approach.</div><div class="sc-zip">ZIP: 32259 · NW St. Johns / St. Johns corridor</div></div>
+  <div class="sc" data-type="k8" data-zip="32259"><div class="sc-bar bar-k8"></div><div class="sc-top"><div><div class="sc-name">Mill Creek Academy</div><div class="sc-loc">St. Johns area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-k8">K-8 Academy</span><span class="stag stag-prog">K-8 Model</span></div><div class="sc-note">Another well-regarded K-8 academy in the St. Johns corridor. District A rating. Consistent academic performance. Popular with families who value the K-8 model for stability through middle school.</div><div class="sc-zip">ZIP: 32259 · St. Johns / NW corridor</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Julington Creek Elementary</div><div class="sc-loc">St. Johns · Julington Creek area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-prog">978 students</span><span class="stag stag-rank">#8 in District Elem</span></div><div class="sc-note">Serves the Julington Creek community in SW St. Johns. 978 students. US News ranked #8 among district elementary schools. Strong parent community and consistent A rating.</div><div class="sc-zip">ZIP: 32259 · Serves: Julington Creek communities</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Durbin Creek Elementary</div><div class="sc-loc">St. Johns · Durbin Crossing area</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-rank">#3 in FL Elem</span><span class="stag stag-prog">1,020 students</span></div><div class="sc-note">Ranked #3 among FL elementary schools by PublicSchoolReview and #7 in the district by US News. One of the most consistently top-ranked elementary schools in Northeast Florida.</div><div class="sc-zip">ZIP: 32259 · Serves: Durbin Crossing, Aberdeen, St. Johns communities</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Cunningham Creek Elementary</div><div class="sc-loc">St. Johns · Bartram Park area</div></div><div class="grade ga2">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-rank">Top-3 in County</span><span class="stag stag-note">5★ Parent Reviews</span></div><div class="sc-note">One of the most praised elementary schools in all of St. Johns County. Parents consistently rate teachers and administration as outstanding. Near the Bartram Trail HS feeder corridor.</div><div class="sc-zip">ZIP: 32259 · Serves: Bartram Park, St. Johns area</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Hickory Creek Elementary</div><div class="sc-loc">St. Johns / Creekside HS area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-prog">Creekside Feeder Zone</span></div><div class="sc-note">Elementary school in the Creekside HS feeder corridor in NW St. Johns. Consistent A rating. Well-regarded within the community for teacher quality and supportive environment.</div><div class="sc-zip">ZIP: 32259 · Serves: St. Johns / Creekside feeder area</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Timberlin Creek Elementary</div><div class="sc-loc">St. Johns</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-prog">~1,345 students</span><span class="stag stag-note">16:1 Ratio</span></div><div class="sc-note">Well-rounded school balancing academics and enrichment. Good diversity, consistent A grade. Favorable 16:1 student-teacher ratio. Alumni describe a warm culture with approachable teachers.</div><div class="sc-zip">ZIP: 32259 · St. Johns area</div></div>
+  <div class="sc" data-type="elem" data-zip="32081"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Ocean Palms Elementary</div><div class="sc-loc">Ponte Vedra Beach</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-rank">Niche Grade: A</span><span class="stag stag-prog">952 students · 16:1</span></div><div class="sc-note">Highly rated elementary in the 32081/PVB corridor. 952 students with a favorable 16:1 teacher ratio. Popular with Nocatee families in the eastern/coastal portion of the zip.</div><div class="sc-zip">ZIP: 32081 · Serves: Nocatee East / PVB area</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Wards Creek Elementary</div><div class="sc-loc">St. Johns area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary</span><span class="stag stag-rank">Often compared to Timberlin Creek</span></div><div class="sc-note">Frequently compared with Timberlin Creek by families choosing between the two. Consistent A district rating. Strong community culture in the St. Johns / NW corridor.</div><div class="sc-zip">ZIP: 32259 · St. Johns / NW corridor</div></div>
+  <div class="sc" data-type="elem" data-zip="32259"><div class="sc-bar bar-elem"></div><div class="sc-top"><div><div class="sc-name">Pine Island Academy</div><div class="sc-loc">St. Johns area</div></div><div class="grade ga">A</div></div><div class="sc-meta"><span class="stag lv-e">Elementary / Academy</span><span class="stag stag-prog">NW St. Johns</span></div><div class="sc-note">Academy-model elementary serving the NW St. Johns / Creekside HS corridor. District A grade. Part of the county's growing network of academy-model schools offering specialized curriculum approaches.</div><div class="sc-zip">ZIP: 32259 · NW St. Johns area</div></div>
+  <div class="sc sc-soon" data-type="k8" data-zip="32092"><div class="sc-bar bar-new"></div><div class="sc-top"><div><div class="sc-name">SilverLeaf Academy</div><div class="sc-loc">Inside SilverLeaf Community · 32092</div></div><div class="grade gnew">NEW</div></div><div class="sc-meta"><span class="stag lv-new">K-8 · Opening Fall 2026</span><span class="stag stag-note">Name TBD</span><span class="stag stag-prog">Walk-to-School</span></div><div class="sc-note">Brand new K-8 school opening Fall 2026 inside the SilverLeaf master-planned community. Final name not yet announced. Walk or bike from most SilverLeaf neighborhoods. A major draw for young families buying in SilverLeaf now.</div><div class="sc-zip">ZIP: 32092 · Inside SilverLeaf development · stjohns.k12.fl.us for updates</div></div>
+</div>
+<div class="premium fade">
+  <div><h3>The School Premium: It's Also a Price Floor</h3><p>St. Johns County's school ranking isn't just good for your children — it's baked into every home price and acts as a permanent floor on property values during downturns. Families from high-tax states keep moving here specifically for the schools. That demand is structural, not cyclical.</p></div>
+  <div class="prem-stat"><div class="prem-val">15–25%</div><div class="prem-lbl">Premium over comparable Duval County homes. Stable for 5+ years.</div></div>
+</div>
+<div class="sec-eye fade">Section 02 · Real Estate Market</div>
+<div class="sec-title fade">5 ZIP Codes · Current Snapshot · Feb 2026</div>
+<div class="sec-sub fade">From the buyer's market in 32092/32259 to the luxury corridor in 32082 — North St. Johns offers more range than most people realize.</div>
+<div class="re-grid fade">
+  <div class="rs c1"><div class="rs-lbl">32092 Median (WGV/SilverLeaf)</div><div class="rs-val">$462<sup>K</sup></div><span class="chip ch-dn">▼ 3.5% YoY</span><div class="rs-note">541 active listings · 107 days on mkt</div></div>
+  <div class="rs c2"><div class="rs-lbl">32259 Median (NW St. Johns)</div><div class="rs-val">$511<sup>K</sup></div><span class="chip ch-dn">▼ 11.3% YoY</span><div class="rs-note">Biggest YoY drop · 109 days on mkt</div></div>
+  <div class="rs c3"><div class="rs-lbl">32081 Median (Nocatee)</div><div class="rs-val">$638<sup>K</sup></div><span class="chip ch-dn">▼ 8.9% YoY</span><div class="rs-note">94 days on mkt · Oct 2025</div></div>
+  <div class="rs c4"><div class="rs-lbl">32082 Median (PVB)</div><div class="rs-val">$910<sup>K</sup></div><span class="chip ch-up">▲ 8.7% YoY</span><div class="rs-note">96 days on mkt · Luxury market</div></div>
+  <div class="rs c5"><div class="rs-lbl">32095 Median (N. St. Aug)</div><div class="rs-val">~$580<sup>K</sup></div><span class="chip ch-dn">▼ ~3% YoY</span><div class="rs-note">Palencia / Bannon Lakes · ~90 days</div></div>
+  <div class="rs c6"><div class="rs-lbl">Homes w/ Price Cuts</div><div class="rs-val">57<sup>%</sup></div><span class="chip ch-fl">North County avg</span><div class="rs-note">Over half of listings discounted</div></div>
+  <div class="rs c7"><div class="rs-lbl">Mortgage Rate (30yr)</div><div class="rs-val">6.2<sup>%</sup></div><span class="chip ch-up">▼ from 7.9% in '23</span><div class="rs-note">Down from 2023 peak</div></div>
+  <div class="rs c8"><div class="rs-lbl">School Premium vs. Duval</div><div class="rs-val">15–25<sup>%</sup></div><span class="chip ch-fl">Stable 5+ yrs</span><div class="rs-note">Structural price floor</div></div>
+</div>
+<div class="table-box fade">
+  <div class="sec-title" style="font-size:19px;margin-bottom:4px;">ZIP Code Breakdown — North St. Johns Only</div>
+  <div class="sec-sub" style="margin-bottom:18px;">Excludes 32084 (Old Town), 32086 (South), 32080 (Anastasia Island)</div>
+  <table>
+    <thead><tr><th>ZIP</th><th>Area / Key Communities</th><th>Median Price</th><th>Days on Mkt</th><th>YoY</th><th>Market Type</th><th>Primary High Schools</th></tr></thead>
+    <tbody>
+      <tr><td><div class="zc">32092</div><div class="za">WGV · SilverLeaf · TrailMark</div></td><td>SilverLeaf, TrailMark, Shearwater, WGV, Sevilla, South Hampton, Segovia</td><td><strong>$462K</strong></td><td>107 days</td><td><span class="delta-neg">▼ 3.5%</span></td><td><span class="ztag zt-buy">Buyer's Market</span></td><td>Tocoi Creek HS</td></tr>
+      <tr><td><div class="zc">32259</div><div class="za">NW St. Johns · Julington Creek</div></td><td>Julington Creek, Bartram Park, Aberdeen, St. Johns Forest, Durbin Crossing, Rivertown</td><td><strong>$511K</strong></td><td>109 days</td><td><span class="delta-neg">▼ 11.3%</span></td><td><span class="ztag zt-buy">Buyer's Market</span></td><td>Bartram Trail · Creekside · Beachside</td></tr>
+      <tr><td><div class="zc">32081</div><div class="za">Nocatee · Ponte Vedra</div></td><td>Nocatee (SJC portion), Del Webb, Coastal Oaks, Twenty Mile, Willowcove, Seabrook</td><td><strong>$638K</strong></td><td>~94 days</td><td><span class="delta-neg">▼ 8.9%</span></td><td><span class="ztag zt-bal">Transitional</span></td><td>Allen D. Nease HS</td></tr>
+      <tr><td><div class="zc">32082</div><div class="za">Ponte Vedra Beach · Sawgrass</div></td><td>Sawgrass Players Club, Palm Valley, South Ponte Vedra, Old Ponte Vedra Beach</td><td><strong>$910K</strong></td><td>~96 days</td><td><span class="delta-pos">▲ 8.7%</span></td><td><span class="ztag zt-lux">Luxury / Stable</span></td><td>Ponte Vedra HS</td></tr>
+      <tr><td><div class="zc">32095</div><div class="za">N. St. Augustine · Palencia</div></td><td>Palencia, Twin Creeks, Bannon Lakes, Marsh Creek</td><td><strong>~$580K</strong></td><td>~90 days</td><td><span class="delta-neg">▼ ~3%</span></td><td><span class="ztag zt-bal">Transitional</span></td><td>Nease HS / Ponte Vedra HS</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="sec-eye fade">Section 03 · 3-Year Market Shift</div>
+<div class="sec-title fade">Feb 2023 → Feb 2026: How Much Has Changed?</div>
+<div class="sec-sub fade">North St. Johns County transformed from a tight seller's market into buyer-favorable territory. Here's the data across all 5 ZIP codes.</div>
+<div class="trend-box fade">
+  <table>
+    <thead><tr><th>Period</th><th>32092 Median</th><th>32259 Median</th><th>32081 Median</th><th>32082 Median</th><th>County DOM</th><th>Market Type</th></tr></thead>
+    <tbody>
+      <tr><td><div class="yr">Feb 2023</div></td><td>~$527K</td><td>~$598K</td><td>~$700K</td><td>~$855K</td><td>~38 days</td><td><span class="mtype mt-s">Seller's Market</span></td></tr>
+      <tr><td><div class="yr">Feb 2024</div></td><td>~$479K</td><td>~$577K</td><td>~$700K</td><td>~$870K</td><td>~62 days</td><td><span class="mtype mt-b">Transitional</span></td></tr>
+      <tr><td><div class="yr">Jan 2025</div></td><td>$480K</td><td>~$540K</td><td>~$671K</td><td>~$901K</td><td>~100 days</td><td><span class="mtype mt-buy">Buyer's Market</span></td></tr>
+      <tr><td><div class="yr now">Feb 2026 ★</div></td><td>$462K</td><td>$511K</td><td>$638K</td><td>$910K</td><td>94–109 days</td><td><span class="mtype mt-buy">Buyer's Market</span></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="change-grid fade">
+  <div class="cc"><div class="cc-num" style="color:var(--red)">-$87K</div><div class="cc-lbl">32259 price drop since '23</div><div class="cc-desc">The biggest absolute drop in North County. Bartram Trail / Creekside zone at its most affordable in 3 years.</div></div>
+  <div class="cc"><div class="cc-num" style="color:var(--gold)">+163%</div><div class="cc-lbl">Longer days on market</div><div class="cc-desc">From 38 days county-wide in 2023 to 94–109 days today. You have weeks to decide, not hours.</div></div>
+  <div class="cc"><div class="cc-num" style="color:var(--blue)">+110%</div><div class="cc-lbl">More inventory</div><div class="cc-desc">Active listings more than doubled in 32092 alone. Real selection across all price points.</div></div>
+  <div class="cc"><div class="cc-num" style="color:var(--teal)">#1</div><div class="cc-lbl">Academic rank: unchanged</div><div class="cc-desc">Through all market swings, St. Johns holds the highest math/reading proficiency in FL. That floor doesn't move.</div></div>
+</div>
+<div class="split fade">
+  <div class="sc2"><div class="sh b">🟢 If You're a Buyer with Young Kids</div><div class="si"><span class="si-i">✓</span>32259 is the sweet spot: -11.3% YoY price drop with Bartram Trail, Creekside, and Beachside as your feeder schools.</div><div class="si"><span class="si-i">✓</span>32092 buyers get SilverLeaf's new K-8 school (Fall 2026) — walk to school from day one in a brand new facility.</div><div class="si"><span class="si-i">✓</span>32081 (Nocatee) dropped ~8.9% YoY while adding amenities. Nease HS and Landrum MS serve the area.</div><div class="si"><span class="si-i">✓</span>Builder incentives (rate buydowns, CDD/HOA coverage) still active in TrailMark, SilverLeaf, Shearwater, and Nocatee new builds.</div><div class="si"><span class="si-i">✓</span>If rates drop, this buyer leverage window closes fast. Spring 2026 is an unusually good entry point.</div></div>
+  <div class="sc2"><div class="sh s">🔴 If You're a Seller</div><div class="si"><span class="si-i">✗</span>In 32092 you're competing with 541 active listings plus builder new construction offering rate incentives you can't match.</div><div class="si"><span class="si-i">✗</span>32259 buyers have maximum leverage right now — -11.3% YoY means pricing discipline is critical. Don't overprice.</div><div class="si"><span class="si-i">✓</span>School district quality gives your home a structural price floor. It won't collapse the way non-school-district markets can.</div><div class="si"><span class="si-i">✓</span>List Feb–July (spring peak). Families relocating need to close before the school year. Use that urgency.</div><div class="si"><span class="si-i">✓</span>32082 (PVB) is the only zip appreciating YoY (+8.7%). Sellers there are in a different market entirely.</div></div>
+</div>
+<div class="forecast-box fade">
+  <div class="sec-eye">Section 04 · Outlook</div>
+  <div class="sec-title" style="font-size:21px;margin-bottom:16px;">What to Expect: Rest of 2026</div>
+  <div class="fi"><div class="fd" style="background:var(--green)"></div><p class="ft"><strong>Prices:</strong> Modest 2–4% appreciation expected county-wide by year-end as population growth and school demand provide a floor. Not a crash, not a rebound — a gradual stabilization.</p></div>
+  <div class="fi"><div class="fd" style="background:var(--teal)"></div><p class="ft"><strong>Best buying window:</strong> Now through mid-year while inventory is elevated and builders are incentivizing. Rate drop = buyers return fast and leverage shrinks.</p></div>
+  <div class="fi"><div class="fd" style="background:var(--gold)"></div><p class="ft"><strong>SilverLeaf Academy (32092):</strong> New K-8 opening Fall 2026 inside SilverLeaf. School zones will be confirmed this spring — families buying now will have front-row access.</p></div>
+  <div class="fi"><div class="fd" style="background:var(--purple)"></div><p class="ft"><strong>32259 — the opportunity:</strong> The -11.3% YoY drop is the biggest in North County. Established communities, A-rated schools (Bartram/Creekside/Beachside), 20-min drive to Jacksonville.</p></div>
+  <div class="fi"><div class="fd" style="background:#e67e22"></div><p class="ft"><strong>32082 (Ponte Vedra Beach):</strong> Bucking the trend with +8.7% YoY appreciation. Limited oceanfront and intracoastal supply. Different market physics — more like a coastal luxury asset than a suburban family market.</p></div>
+  <div class="fi"><div class="fd" style="background:var(--navy)"></div><p class="ft"><strong>Long-term:</strong> St. Johns County's #1 academic ranking, 1.5–1.8% annual population growth, no state income tax, and the I-95 corridor's continued development make this the most defensible long-term family buy in NE Florida.</p></div>
+</div>
+</div>
+<div class="footer">Prepared by Admir Husadzinovic · Realtor with DJ &amp; Lindsey Real Estate · 904-788-1024 · realtoradmir@gmail.com<br>Sources: Redfin · Rocket Homes · Movoto · NEFAR MLS · Niche (2026) · PublicSchoolReview · US News Education · stjohns.k12.fl.us · Feb 2026 — Not financial advice. Always verify school zones at stjohns.k12.fl.us before purchase.</div>
+<script>
+function animBars(){
+  document.querySelectorAll('.bfill[data-w]').forEach(b=>{
+    const r=b.closest('.sc').getBoundingClientRect();
+    if(r.top<window.innerHeight+80){b.style.width=b.dataset.w;delete b.dataset.w;}
+  });
+}
+window.addEventListener('scroll',animBars);
+setTimeout(animBars,600);
+function filterSchools(filter,btn){
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.sc').forEach(card=>{
+    const type=card.dataset.type;
+    const zip=card.dataset.zip;
+    if(filter==='all'||type===filter||zip===filter){card.style.display='';}
+    else{card.style.display='none';}
+  });
+}
+</script>
+</body>
+</html>
